@@ -41,8 +41,25 @@ void main() {
     print('This is FINALLY Clause and is always executed');
   }
 
+  print('CASE 5');
+  //CASE 5
+ try{
+   depositMoney(-200);
+ }catch(e){
+   print(e.errorMessage());
+ }
+
+}
 
 
+class DepositException implements Exception{
+  String errorMessage(){
+   return 'You can\'t enter the amount less than zero';
+  }
+}
 
-
+void depositMoney(int amount){
+  if(amount<0){
+    throw new DepositException();
+  }
 }
