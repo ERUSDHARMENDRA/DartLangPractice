@@ -63,3 +63,4 @@ void depositMoney(int amount){
     throw new DepositException();
   }
 }
+
