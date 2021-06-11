@@ -45,8 +45,9 @@ void main() {
   //CASE 5
  try{
    depositMoney(-200);
- }catch(e){
+ }catch(e,s){
    print(e.errorMessage());
+   print('STACK TRACE is: $s');
  }
 
 }
